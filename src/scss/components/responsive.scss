@@ -1,0 +1,148 @@
+@media only screen and (max-width: 970px) {
+	.grid {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		.grid-item {
+			flex: 1;
+			width: 100%;
+			aspect-ratio: 4/1;
+			&:after {
+				background: linear-gradient(270deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+				height: 100%;
+				z-index: 5;
+			}
+			.content {
+				z-index: 10;
+				height: 100%;
+				margin-top: 0;
+				padding: 20px;
+				align-items: center;
+				.content-inner {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 767px) {
+	.App {
+		padding-top: 50px;
+		padding-bottom: 0;
+	}
+	.site-bounds {
+		padding: 0;
+	}
+	.waves {
+		display: none;
+	}
+	.left {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.right {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.waves {
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}
+@media only screen and (max-width: 500px) {
+	.App {
+		padding-top: 0;
+	}
+
+	.left,
+	.right {
+		padding-top: 0;
+		padding-bottom: 0;
+		.inner-content {
+			padding-left: 0;
+		}
+		.intro {
+			.top-title {
+				margin-left: -10px;
+			}
+		}
+	}
+	.grid {
+		margin-bottom: 30px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		.grid-item {
+			aspect-ratio: 1/1;
+			&:after {
+				height: 50%;
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+				transition: 150ms linear all;
+				z-index: 0;
+			}
+			.content {
+				height: 50%;
+				margin-top: auto;
+				align-items: flex-end;
+				.content-inner {
+					gap: 25px;
+				}
+				p.title {
+					font-size: 20px;
+					line-height: 1.2;
+				}
+			}
+		}
+	}
+	.copy {
+		margin-bottom: 0;
+		margin-top: 32px;
+	}
+	.left {
+		padding-top: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+		.button-container {
+			display: none;
+		}
+	}
+	.right {
+		padding-bottom: 40px;
+		padding-left: 0;
+		padding-right: 0;
+		.button-container {
+			padding-left: 0;
+			position: relative;
+			display: flex;
+			z-index: 10;
+		}
+	}
+	.main-content {
+		gap: 60px;
+	}
+	.stamp {
+		width: 140px;
+		right: 10px;
+		top: 10px;
+		left: initial;
+	}
+	h1 {
+		font-size: 30px;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+	p.top-title {
+		font-size: 24px;
+	}
+	p {
+		font-size: 16px;
+	}
+}

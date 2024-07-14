@@ -1,0 +1,79 @@
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+$anim: 175ms;
+
+p.top-title,
+h1,
+.copy,
+.left .button-container,
+.grid-item,
+.waves,
+.right .button-container {
+	animation-duration: $anim;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+p.top-title {
+	transform: translateY(20px);
+	animation-name: fadeUp;
+	animation-delay: $anim;
+}
+.waves {
+	animation-name: fadeIn;
+}
+
+h1 {
+	animation-name: fadeIn;
+	animation-delay: $anim * 2;
+}
+
+.copy {
+	animation-name: fadeIn;
+	animation-delay: $anim * 3;
+}
+.left .button-container {
+	transform: translateY(20px);
+	animation-name: fadeIn;
+
+	animation-delay: $anim * 4;
+}
+
+.grid {
+	.grid-item {
+		animation-name: fadeIn;
+
+		&:nth-child(1) {
+			animation-delay: $anim * 5;
+		}
+		&:nth-child(2) {
+			animation-delay: $anim * 6;
+		}
+		&:nth-child(3) {
+			animation-delay: $anim * 7;
+		}
+		&:nth-child(4) {
+			animation-delay: $anim * 8;
+		}
+	}
+}
+.right .button-container {
+	animation-name: fadeUp;
+	transform: translateY(20px);
+	animation-delay: $anim * 9;
+}
